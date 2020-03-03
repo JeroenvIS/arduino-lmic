@@ -8,13 +8,13 @@
  * This the HAL to run LMIC on top of the Arduino environment.
  *******************************************************************************/
 
+#define _GNU_SOURCE 1 // For fopencookie
+#include <stdio.h>
+#undef _GNU_SOURCE
 #include <Arduino.h>
 #include <SPI.h>
 #include "../lmic.h"
 #include "hal.h"
-#define _GNU_SOURCE 1 // For fopencookie
-#include <stdio.h>
-#undef _GNU_SOURCE
 
 // -----------------------------------------------------------------------------
 // I/O
